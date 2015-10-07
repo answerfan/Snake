@@ -10,12 +10,32 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sym;
 
-        public void Draw()
+        public static void Func1(int value)
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
+
         }
+
+        public static void Func2(int value)
+        {
+            value = value + 1;
+        }
+
+        public static void Func3(int X)
+        {
+            X = x + 1;
+        }
+
+        public static void Move(Point p, int dx, int dy)
+        {
+            p.x = p.x + dx;
+            p.y = p.y + dy;
+        }
+
+        public static void Update(Point p)
+        {
+            p = new Point();
+        }
+
     }
 }
