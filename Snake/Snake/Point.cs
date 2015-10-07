@@ -10,31 +10,17 @@ namespace Snake
     {
         public int x;
         public int y;
+        public char sym;
 
-        public static void Func1(int value)
+        public Point(int _x, int _y, char _sym)
         {
-
+            x = _x;
+            y = _y;
+            sym = _sym;
         }
 
-        public static void Func2(int value)
+        public Point()
         {
-            value = value + 1;
-        }
-
-        public static void Func3(int X)
-        {
-            X = x + 1;
-        }
-
-        public static void Move(Point p, int dx, int dy)
-        {
-            p.x = p.x + dx;
-            p.y = p.y + dy;
-        }
-
-        public static void Update(Point p)
-        {
-            p = new Point();
         }
 
     }
