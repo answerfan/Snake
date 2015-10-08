@@ -24,7 +24,7 @@ namespace Snake
             Console.WriteLine( "Call func3. x = " + x );
 
             Point p1 = new Point( 1, 4, '*');
-            Move( p1 , 12 , 10 );
+            Move( p1 , 22 , 10 );
             Console.WriteLine( "Call move.p1.x = " + p1.x + " , p1.y = " + p1.y );
 
             Point p2 = new Point( 4 , 5 , '#' );
