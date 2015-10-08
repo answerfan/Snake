@@ -15,22 +15,22 @@ namespace Snake
             Func1( x );
             Console.WriteLine( "Call func1. x = " + x );
 
-            int x = 1;
+            x = 1;
             Func2( x );
             Console.WriteLine( "Call func2. x = " + x );
 
-            int x = 1;
+            x = 1;
             Func3( x );
             Console.WriteLine( "Call func3. x = " + x );
 
             Point p1 = new Point( 1, 4, '*');
-            Move( p1 , 22 , 10 );
+            Move( p1 , 29 , 10 );
             Console.WriteLine( "Call move.p1.x = " + p1.x + " , p1.y = " + p1.y );
 
-            Point p2 = new Point( 4 , 5 , '#' );
+            Point p2 = new Point( 4 , 9 , '#' );
             p1 = p2;
             p2.x = 8;
-            p2.y = 8;
+            p2.y = 3;
             Console.WriteLine( "p1 = p2. p1.x = " + p1.x + " , p1.y = " + p1.y + " ; p2.x = " + p2.x + " , p2.y = " + p2.y );
 
             p1 = new Point( 1, 5, '!' );
