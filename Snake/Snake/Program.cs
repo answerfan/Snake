@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Snake
 {
@@ -9,31 +10,44 @@ namespace Snake
         {
             Console.SetBufferSize(80, 25);
 
-            VerticalLine vl = new VerticalLine(5, 0, 10, '%');
-            Draw(vl);
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
+            // Отрисовка точек			
             Point p = new Point(4, 5, '*');
-            Figure fSnake = new Snake(p, 4, Direction.RIGHT);
-            Draw(fSnake);
-            Snake snake = (Snake)fSnake;
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
-            HorizontalLine hl = new HorizontalLine(0, 5, 6, '&');
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
 
-            List<Figure> figures = new List<Figure>();
-            figures.Add(fSnake);
-            figures.Add(vl);
-            figures.Add(hl);
-
-            foreach (var f in figures)
+            while (true)
             {
-                f.Draw();
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    Console.WriteLine("Вы проиграли, сожалеем!");
+                    Thread.Sleep(2000);
+                    Console.ReadLine();
+                    break;
+                }
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
             }
         }
-          static void Draw(Figure figure)
-            {
-                figure.Draw();
-            }
-
-               
     }
 }
