@@ -45,27 +45,27 @@ namespace Snake
                 {
                     snake.Move();
                 }
-                if (shet == 5)
+                if (shet == 3)
                 {
                     zad = 90;
                 }
 
-                if (shet == 6)
+                if (shet == 8)
                 {
                     zad = 80;
                 }
 
-                if (shet == 7)
+                if (shet == 13)
                 {
                     zad = 70;
                 }
 
-                if (shet == 8)
+                if (shet == 20)
                 {
                     zad = 60;
                 }
 
-                if (shet == 9)
+                if (shet == 30)
                 {
                     zad = 50;
                 }
