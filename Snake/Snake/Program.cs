@@ -30,9 +30,6 @@ namespace Snake
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
                     Loss.Lost();
-                    Console.SetCursorPosition(30, 13);
-                    Console.WriteLine("Ваш счёт = " + shet);
-                    Console.ReadLine();
                     break;
                 }
                 if (snake.Eat(food))
@@ -60,14 +57,40 @@ namespace Snake
                     zad = 70;
                 }
 
-                if (shet == 20)
+                if (shet == 28)
                 {
                     zad = 60;
                 }
 
-                if (shet == 30)
+                if (shet == 23)
                 {
                     zad = 50;
+                }
+
+                if (shet == 28)
+                {
+                    zad = 40;
+                }
+
+                if (shet == 33)
+                {
+                    zad = 30;
+                }
+
+                if (shet == 38)
+                {
+                    zad = 20;
+                }
+
+                if (shet == 43)
+                {
+                    zad = 10;
+                }
+
+                if (shet == 50)
+                {
+                    Console.WriteLine("Вы безумный задрот и играть с Вами дальше не интересно - Вы победили!!!");
+                    break;
                 }
 
                 Thread.Sleep(zad);
@@ -76,7 +99,13 @@ namespace Snake
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
+
             }
+            Console.SetCursorPosition(26, 11);
+            Console.WriteLine("Ваш счёт " + shet);
+            Console.ReadLine();
         }
+
+        
     }
 }
