@@ -11,6 +11,7 @@ namespace Snake
             Console.SetBufferSize(80, 25);
 
             int shet = 0;
+            int zad = 100;
 
             Walls walls = new Walls(80, 25);
             walls.Draw();
@@ -28,12 +29,9 @@ namespace Snake
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
-                    Console.Clear();
-                    Console.SetCursorPosition(30, 12);
-                    Console.WriteLine("Вы проиграли, сожалеем!");
+                    Loss.Lost();
                     Console.SetCursorPosition(30, 13);
                     Console.WriteLine("Ваш счёт = " + shet);
-                    Thread.Sleep(2000);
                     Console.ReadLine();
                     break;
                 }
@@ -47,8 +45,32 @@ namespace Snake
                 {
                     snake.Move();
                 }
+                if (shet == 5)
+                {
+                    zad = 90;
+                }
 
-                Thread.Sleep(100);
+                if (shet == 6)
+                {
+                    zad = 80;
+                }
+
+                if (shet == 7)
+                {
+                    zad = 70;
+                }
+
+                if (shet == 8)
+                {
+                    zad = 60;
+                }
+
+                if (shet == 9)
+                {
+                    zad = 50;
+                }
+
+                Thread.Sleep(zad);
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
