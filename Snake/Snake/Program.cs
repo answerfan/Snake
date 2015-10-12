@@ -10,6 +10,8 @@ namespace Snake
         {
             Console.SetBufferSize(80, 25);
 
+            int shet = 0;
+
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
@@ -26,7 +28,11 @@ namespace Snake
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
+                    Console.Clear();
+                    Console.SetCursorPosition(30, 12);
                     Console.WriteLine("Вы проиграли, сожалеем!");
+                    Console.SetCursorPosition(30, 13);
+                    Console.WriteLine("Ваш счёт = " + shet);
                     Thread.Sleep(2000);
                     Console.ReadLine();
                     break;
@@ -35,6 +41,7 @@ namespace Snake
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
+                    shet++;
                 }
                 else
                 {
