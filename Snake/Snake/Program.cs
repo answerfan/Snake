@@ -44,7 +44,7 @@ namespace Snake
                 }
                 if (shet == 3)
                 {
-                    zad = 90;
+                    zad = 85;
                 }
 
                 if (shet == 8)
@@ -54,41 +54,43 @@ namespace Snake
 
                 if (shet == 13)
                 {
-                    zad = 70;
+                    zad = 75;
                 }
 
                 if (shet == 28)
                 {
-                    zad = 60;
+                    zad = 70;
                 }
 
                 if (shet == 23)
                 {
-                    zad = 50;
+                    zad = 60;
                 }
 
                 if (shet == 28)
                 {
-                    zad = 40;
+                    zad = 50;
                 }
 
                 if (shet == 33)
                 {
-                    zad = 30;
+                    zad = 45;
                 }
 
                 if (shet == 38)
                 {
-                    zad = 20;
+                    zad = 35;
                 }
 
                 if (shet == 43)
                 {
-                    zad = 10;
+                    zad = 30;
                 }
 
                 if (shet == 50)
                 {
+                    Console.Clear();
+                    Console.SetCursorPosition(5, 10);
                     Console.WriteLine("Вы безумный задрот и играть с Вами дальше не интересно - Вы победили!!!");
                     break;
                 }
