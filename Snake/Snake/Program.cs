@@ -42,49 +42,24 @@ namespace Snake
                 {
                     snake.Move();
                 }
-                if (shet == 3)
+                if (shet == 10)
                 {
                     zad = 85;
                 }
 
-                if (shet == 8)
-                {
-                    zad = 80;
-                }
-
-                if (shet == 13)
+                if (shet == 20)
                 {
                     zad = 75;
                 }
 
-                if (shet == 28)
+                if (shet == 30)
                 {
-                    zad = 70;
+                    zad = 65;
                 }
 
-                if (shet == 23)
-                {
-                    zad = 60;
-                }
-
-                if (shet == 28)
+                if (shet == 40)
                 {
                     zad = 50;
-                }
-
-                if (shet == 33)
-                {
-                    zad = 45;
-                }
-
-                if (shet == 38)
-                {
-                    zad = 35;
-                }
-
-                if (shet == 43)
-                {
-                    zad = 30;
                 }
 
                 if (shet == 50)
